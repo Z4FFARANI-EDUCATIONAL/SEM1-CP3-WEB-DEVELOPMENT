@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Rede Social</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1 class="banner">Mini Rede Social</h1>
+    </header>
+    
+    <div class="postar">
+        <div class="digiPost">
+            <label for="digiPost">Digite seu post:</label>
+            <input  type="text" id="digiPost" placeholder="O que você esta pensando hoje?" class="digiPost">
+        </div>
+
+        <label for="Categoria">Categoria:</label>
+        <select name="Categoria" id="Categoria">
+            <option>Todas</option>
+            <option>Noticias</option>
+            <option>Dicas</option>
+            <option>Eventos</option>
+        </select>
+
+        <label for="insertImg">Insira uma image(URL):</label>
+        <input type="text" id="insertImg" placeholder="Insira a url aqui">        
+        
+        <label for="insertImg">Insira uma image(URL):</label>
+        <input type="text" id="insertImg" placeholder="Insira a url aqui">        
+        
+        <label for="insertImg">Insira uma image(URL):</label>
+        <input type="text" id="insertImg" placeholder="Insira a url aqui">
+        
+        <button onclick="criarPost()" class="publicarPost">Postar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
