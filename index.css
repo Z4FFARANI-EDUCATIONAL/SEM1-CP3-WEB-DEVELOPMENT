@@ -32,3 +32,9 @@ header{
     border: solid 2px gray;
     display: flex;
 }
+
+.nomePost {
+text-align: center;
+scale: 70%;
+}
+
