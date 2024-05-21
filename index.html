@@ -7,43 +7,94 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <script src="script.js"></script>
     <header>
         <h1 class="banner">Mini Rede Social</h1>
     </header>
     
     <div class="postar">
         <div class="digiPost">
-            <label for="digiPost">Digite seu post:</label>
-            <input  type="text" id="digiPost" placeholder="O que você esta pensando hoje?" class="digiPost">
+            <label>Digite seu post:</label>
+            <input id="digiPost" placeholder="O que você esta pensando hoje?" class="digiPost">
         </div>
 
         <label>Categoria:</label>
-        <select onclick="janela()" id="Categoria">
-            <option value="janela_1">Todas</option>
-            <option value="janela_2">Noticias</option>
-            <option value="janela_3">Dicas</option>
-            <option value="janela_4">Eventos</option>
+        <select id="escolherCategoria">
+            <option value="escolherNoticias">Notícias</option>
+            <option value="escolherDicas">Dicas</option>
+            <option value="escolherEventos">Eventos</option>
         </select>
 
-        <label>Insira uma image(URL):</label>
+        <label>Insira uma imagem (URL):</label>
         <input type="text" id="insertImg_1" placeholder="Insira a url aqui">        
         
-        <label>Insira uma image(URL):</label>
+        <label>Insira uma imagem (URL):</label>
         <input type="text" id="insertImg_2" placeholder="Insira a url aqui">        
         
-        <label>Insira uma image(URL):</label>
+        <label>Insira uma imagem (URL):</label>
         <input type="text" id="insertImg_3" placeholder="Insira a url aqui">
         
-        <button onclick="criarPost()" class="publicarPost">Postar</button>
+        <button onclick="criarPost()">Postar</button>
+    
+        <br>
+        <label>Filtrar por categoria:</label>
+        <select id="filtrarCategoria" onchange="filtrarCategoria()">
+            <option value="todas">Todas</option>
+            <option value="noticias">Notícias</option>
+            <option value="dicas">Dicas</option>
+            <option value="eventos">Eventos</option>
+        </select>
     </div>
 
-    <div id="Todas" class="publicacao">
-    <h1 class="nomePost" id="nomePost"></h1>
-    <img src="" alt="" id="imgPost_1">
-    <img src="" alt="" id="imgPost_2">
-    <img src="" alt="" id="imgPost_3">
+
+    <div class="alinhamento">
+        <div id="todas" class="categoria"></div>
+
+        <div id="noticias" class="categoria">
+            <h1 class="nomePost" id="texto_noticias"></h1>
+            <img src="Fotos/noneimg.jpg" id="img_noticias_1">
+            <img src="Fotos/noneimg.jpg" id="img_noticias_2">
+            <img src="Fotos/noneimg.jpg" id="img_noticias_3">
+            <div class="botoesFlutuantes">
+                <button class="imagemAnterior" onclick="imagemAnterior_noticias()"><</button>
+                <button class="imagemPosterior" onclick="imagemPosterior_noticias()">></button>
+            </div>
+            <p>Categoria: Notícias</p>
+            <p>Data e Hora: </p>
+            <button id="editar_noticias" onclick="editar(this)">Editar</button>
+            <button id="apagar_noticias" onclick="apagar(this)">Apagar</button>
+        </div>
+
+        <div id="dicas" class="categoria">
+            <h1 class="nomePost" id="texto_dicas"></h1>
+            <img src="Fotos/noneimg.jpg" id="img_dicas_1">
+            <img src="Fotos/noneimg.jpg" id="img_dicas_2">
+            <img src="Fotos/noneimg.jpg" id="img_dicas_3">
+            <div class="botoesFlutuantes">
+                <button class="imagemAnterior" onclick="imagemAnterior_dicas()"><</button>
+                <button class="imagemPosterior" onclick="imagemPosterior_dicas()">></button>
+            </div>
+            <p>Categoria: Dicas</p>
+            <p>Data e Hora: </p>
+            <button id="editar_dicas" onclick="editar(this)">Editar</button>
+            <button id="apagar_dicas" onclick="apagar(this)">Apagar</button>
+        </div>
+
+        <div id="eventos" class="categoria">
+            <h1 class="nomePost" id="texto_eventos"></h1>
+            <img src="Fotos/noneimg.jpg" id="img_eventos_1">
+            <img src="Fotos/noneimg.jpg" id="img_eventos_2">
+            <img src="Fotos/noneimg.jpg" id="img_eventos_3">
+            <div class="botoesFlutuantes">
+                <button class="imagemAnterior" onclick="imagemAnterior_eventos()"><</button>
+                <button class="imagemPosterior" onclick="imagemPosterior_eventos()">></button>
+            </div>
+            <p>Categoria: Eventos</p>
+            <p>Data e Hora: </p>
+            <button id="editar_eventos" onclick="editar(this)">Editar</button>
+            <button id="apagar_eventos" onclick="apagar(this)">Apagar</button>
+        </div>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
