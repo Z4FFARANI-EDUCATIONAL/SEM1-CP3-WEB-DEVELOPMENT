@@ -48,7 +48,64 @@ height: 100px;
 }
 
 
+.caixa {
+    margin-left: 850px;
+    margin-right: 850px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.carrossel {
+    display: flex;
+    margin-left: 0px;
+}
 
 
+.next_1 {
+    animation: next_1 1s ease forwards;
+}
+.next_2 {
+    animation: next_2 1s ease forwards;
+}
+.next_3 {
+    animation: next_3 1s ease forwards;
+}
+
+@keyframes next_1 {
+    from {margin-left: 0px;}
+    to {margin-left: -50px;}
+}
+@keyframes next_2 {
+    from {margin-left: -50px;}
+    to {margin-left: -100px;}
+}
+@keyframes next_3 {
+    from {margin-left: -100px;}
+    to {margin-left: -150px;}
+}
+
+
+.prev_1 {
+    animation: prev_1 1s ease forwards;
+}
+.prev_2 {
+    animation: prev_2 1s ease forwards;
+}
+.prev_3 {
+    animation: prev_3 1s ease forwards;
+}
+
+@keyframes prev_1 {
+    from {margin-left: -150px;}
+    to {margin-left: -100px;}
+}
+@keyframes prev_2 {
+    from {margin-left: -100px;}
+    to {margin-left: -50px;}
+}
+@keyframes prev_3 {
+    from {margin-left: -50px;}
+    to {margin-left: 0px;}
+}
 
 

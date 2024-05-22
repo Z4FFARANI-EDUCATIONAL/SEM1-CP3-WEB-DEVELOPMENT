@@ -52,45 +52,58 @@
 
         <div id="noticias" class="categoria">
             <h1 class="nomePost" id="texto_noticias"></h1>
-            <img src="Fotos/noneimg.jpg" id="img_noticias_1">
-            <img src="Fotos/noneimg.jpg" id="img_noticias_2">
-            <img src="Fotos/noneimg.jpg" id="img_noticias_3">
+            <div class="caixa">
+                <div class="carrossel" id="carrossel_noticias">
+                    <img src="Fotos/noneimg.jpg" id="img_noticias_1">
+                    <img src="Fotos/noneimg.jpg" id="img_noticias_2">
+                    <img src="Fotos/noneimg.jpg" id="img_noticias_3">
+                </div>
+            </div>
+
             <div class="botoesFlutuantes">
-                <button class="imagemAnterior" onclick="imagemAnterior_noticias()"><</button>
-                <button class="imagemPosterior" onclick="imagemPosterior_noticias()">></button>
+                <button class="imagemAnterior" onclick="prevSlide_noticias()">&#10094</button>
+                <button class="imagemPosterior" onclick="nextSlide_noticias()">&#10095</button>
             </div>
             <p>Categoria: Notícias</p>
-            <p>Data e Hora: </p>
+            <p id="data_noticias"></p>
             <button id="editar_noticias" onclick="editar(this)">Editar</button>
             <button id="apagar_noticias" onclick="apagar(this)">Apagar</button>
         </div>
 
         <div id="dicas" class="categoria">
             <h1 class="nomePost" id="texto_dicas"></h1>
-            <img src="Fotos/noneimg.jpg" id="img_dicas_1">
-            <img src="Fotos/noneimg.jpg" id="img_dicas_2">
-            <img src="Fotos/noneimg.jpg" id="img_dicas_3">
+            <div class="caixa">
+                <div class="carrossel" id="carrossel_dicas">
+                    <img src="Fotos/noneimg.jpg" id="img_dicas_1">
+                    <img src="Fotos/noneimg.jpg" id="img_dicas_2">
+                    <img src="Fotos/noneimg.jpg" id="img_dicas_3">
+                </div>
+            </div>
             <div class="botoesFlutuantes">
-                <button class="imagemAnterior" onclick="imagemAnterior_dicas()"><</button>
-                <button class="imagemPosterior" onclick="imagemPosterior_dicas()">></button>
+                <button class="prev" onclick="prevSlide_dicas()">&#10094</button>
+                <button class="next" onclick="nextSlide_dicas()">&#10095</button>
             </div>
             <p>Categoria: Dicas</p>
-            <p>Data e Hora: </p>
+            <p id="data_dicas"></p>
             <button id="editar_dicas" onclick="editar(this)">Editar</button>
             <button id="apagar_dicas" onclick="apagar(this)">Apagar</button>
         </div>
 
         <div id="eventos" class="categoria">
             <h1 class="nomePost" id="texto_eventos"></h1>
-            <img src="Fotos/noneimg.jpg" id="img_eventos_1">
-            <img src="Fotos/noneimg.jpg" id="img_eventos_2">
-            <img src="Fotos/noneimg.jpg" id="img_eventos_3">
+            <div class="caixa">
+                <div class="carrossel" id="carrossel_eventos">
+                    <img src="Fotos/noneimg.jpg" id="img_eventos_1">
+                    <img src="Fotos/noneimg.jpg" id="img_eventos_2">
+                    <img src="Fotos/noneimg.jpg" id="img_eventos_3">
+                </div>
+            </div>
             <div class="botoesFlutuantes">
-                <button class="imagemAnterior" onclick="imagemAnterior_eventos()"><</button>
-                <button class="imagemPosterior" onclick="imagemPosterior_eventos()">></button>
+                <button class="imagemAnterior" onclick="prevSlide_eventos()">&#10094</button>
+                <button class="imagemPosterior" onclick="nextSlide_eventos()">&#10095</button>
             </div>
             <p>Categoria: Eventos</p>
-            <p>Data e Hora: </p>
+            <p id="data_eventos"></p>
             <button id="editar_eventos" onclick="editar(this)">Editar</button>
             <button id="apagar_eventos" onclick="apagar(this)">Apagar</button>
         </div>
