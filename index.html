@@ -9,41 +9,48 @@
 <body>
     <script src="script.js"></script>
     <header>
+        <img class="logo" src="https://static-00.iconduck.com/assets.00/twitter-icon-512x422-r42wnosn.png" alt="">
         <h1 class="banner">Mini Rede Social</h1>
     </header>
     
     <div class="postar">
-        <div class="digiPost">
-            <label>Digite seu post:</label>
-            <input id="digiPost" placeholder="O que você esta pensando hoje?" class="digiPost">
+        <div class="barras-digitar">
+            <label>🖋️ Digite seu post:</label>
+            <input id="digiPost" placeholder="O que você está pensando hoje?" class="digiPost">
         </div>
 
-        <label>Categoria:</label>
-        <select id="escolherCategoria">
-            <option value="escolherNoticias">Notícias</option>
-            <option value="escolherDicas">Dicas</option>
-            <option value="escolherEventos">Eventos</option>
-        </select>
-
-        <label>Insira uma imagem (URL):</label>
-        <input type="text" id="insertImg_1" placeholder="Insira a url aqui">        
+        <div class="barras-categoria">
+            <label>📖 Categoria:</label>   
+            <select id="escolherCategoria" class="selecionar">
+                <option class="selecionar" value="escolherNoticias">Notícias</option>
+                <option class="selecionar" value="escolherDicas">Dicas</option>
+                <option class="selecionar" value="escolherEventos">Eventos</option>
+            </select>
+        </div>
         
-        <label>Insira uma imagem (URL):</label>
-        <input type="text" id="insertImg_2" placeholder="Insira a url aqui">        
+        <div class="barras">
+            <label>🏞️ Insira uma imagem (URL):</label>
+            <input id="insertImg_1" placeholder="Insira a url aqui"> 
+        </div>
+        <div class="barras">
+            <label>🏞️ Insira uma imagem (URL):</label>
+            <input id="insertImg_2" placeholder="Insira a url aqui">
+        </div>
+        <div class="barras">
+            <label>🏞️ Insira uma imagem (URL):</label>
+            <input id="insertImg_3" placeholder="Insira a url aqui">
+        </div>
+        <button class="botao-postar" onclick="criarPost()">🔈Postar</button>
         
-        <label>Insira uma imagem (URL):</label>
-        <input type="text" id="insertImg_3" placeholder="Insira a url aqui">
-        
-        <button onclick="criarPost()">Postar</button>
-    
-        <br>
-        <label>Filtrar por categoria:</label>
-        <select id="filtrarCategoria" onchange="filtrarCategoria()">
-            <option value="todas">Todas</option>
-            <option value="noticias">Notícias</option>
-            <option value="dicas">Dicas</option>
-            <option value="eventos">Eventos</option>
-        </select>
+        <div class="elementos-filtrar">
+            <label class="filtragem">Filtrar por categoria:</label>
+            <select class="selecionar" id="filtrarCategoria" onchange="filtrarCategoria()">
+                <option class="selecionar" value="todas">Todas</option>
+                <option class="selecionar" value="noticias">Notícias</option>
+                <option class="selecionar" value="dicas">Dicas</option>
+                <option class="selecionar" value="eventos">Eventos</option>
+            </select>
+        </div>
     </div>
 
 
@@ -53,61 +60,79 @@
         <div id="noticias" class="categoria">
             <h1 class="nomePost" id="texto_noticias"></h1>
             <div class="caixa">
+                <div class="botoesFlutuantes">
+                    <div class="centrao">
+                        <button class="prev" onclick="prevSlide_noticias()">&#10094</button>
+                        <button class="next" onclick="nextSlide_noticias()">&#10095</button>
+                    </div>
+                </div>
                 <div class="carrossel" id="carrossel_noticias">
-                    <img src="Fotos/noneimg.jpg" id="img_noticias_1">
-                    <img src="Fotos/noneimg.jpg" id="img_noticias_2">
-                    <img src="Fotos/noneimg.jpg" id="img_noticias_3">
+                    <img src="Fotos/default.png" id="img_noticias_1">
+                    <img src="Fotos/default.png" id="img_noticias_2">
+                    <img src="Fotos/default.png" id="img_noticias_3">
                 </div>
             </div>
-
-            <div class="botoesFlutuantes">
-                <button class="imagemAnterior" onclick="prevSlide_noticias()">&#10094</button>
-                <button class="imagemPosterior" onclick="nextSlide_noticias()">&#10095</button>
-            </div>
-            <p>Categoria: Notícias</p>
+            <p class="nome_categoria">Categoria: Notícias</p>
             <p id="data_noticias"></p>
-            <button id="editar_noticias" onclick="editar(this)">Editar</button>
-            <button id="apagar_noticias" onclick="apagar(this)">Apagar</button>
+            <button class="botao-opcoes" id="editar_noticias" onclick="editar(this)">🖋️ Editar</button>
+            <button class="botao-opcoes" id="apagar_noticias" onclick="apagar(this)">🗑️ Apagar</button>
+            <div class="meio">
+                <div class="divisa"></div>
+            </div>
         </div>
 
+        
         <div id="dicas" class="categoria">
             <h1 class="nomePost" id="texto_dicas"></h1>
             <div class="caixa">
+                <div class="botoesFlutuantes">
+                    <div class="centrao">
+                        <button class="prev" onclick="prevSlide_dicas()">&#10094</button>
+                        <button class="next" onclick="nextSlide_dicas()">&#10095</button>
+                    </div>
+                </div>
                 <div class="carrossel" id="carrossel_dicas">
-                    <img src="Fotos/noneimg.jpg" id="img_dicas_1">
-                    <img src="Fotos/noneimg.jpg" id="img_dicas_2">
-                    <img src="Fotos/noneimg.jpg" id="img_dicas_3">
+                    <img src="Fotos/default.png" id="img_dicas_1">
+                    <img src="Fotos/default.png" id="img_dicas_2">
+                    <img src="Fotos/default.png" id="img_dicas_3">
                 </div>
             </div>
-            <div class="botoesFlutuantes">
-                <button class="prev" onclick="prevSlide_dicas()">&#10094</button>
-                <button class="next" onclick="nextSlide_dicas()">&#10095</button>
-            </div>
-            <p>Categoria: Dicas</p>
+            <p class="nome_categoria">Categoria: Dicas</p>
             <p id="data_dicas"></p>
-            <button id="editar_dicas" onclick="editar(this)">Editar</button>
-            <button id="apagar_dicas" onclick="apagar(this)">Apagar</button>
+            <button class="botao-opcoes" id="editar_dicas" onclick="editar(this)">🖋️ Editar</button>
+            <button class="botao-opcoes" id="apagar_dicas" onclick="apagar(this)">🗑️ Apagar</button>
+            <div class="meio">
+                <div class="divisa"></div>
+            </div>
         </div>
+
+        
 
         <div id="eventos" class="categoria">
             <h1 class="nomePost" id="texto_eventos"></h1>
             <div class="caixa">
+                <div class="botoesFlutuantes">
+                    <div class="centrao">
+                        <button class="prev" onclick="prevSlide_eventos()">&#10094</button>
+                        <button class="next" onclick="nextSlide_eventos()">&#10095</button>
+                    </div>
+                </div>
                 <div class="carrossel" id="carrossel_eventos">
-                    <img src="Fotos/noneimg.jpg" id="img_eventos_1">
-                    <img src="Fotos/noneimg.jpg" id="img_eventos_2">
-                    <img src="Fotos/noneimg.jpg" id="img_eventos_3">
+                    <img src="Fotos/default.png" id="img_eventos_1">
+                    <img src="Fotos/default.png" id="img_eventos_2">
+                    <img src="Fotos/default.png" id="img_eventos_3">
                 </div>
             </div>
-            <div class="botoesFlutuantes">
-                <button class="imagemAnterior" onclick="prevSlide_eventos()">&#10094</button>
-                <button class="imagemPosterior" onclick="nextSlide_eventos()">&#10095</button>
-            </div>
-            <p>Categoria: Eventos</p>
+            <p class="nome_categoria">Categoria: Eventos</p>
             <p id="data_eventos"></p>
-            <button id="editar_eventos" onclick="editar(this)">Editar</button>
-            <button id="apagar_eventos" onclick="apagar(this)">Apagar</button>
+            <button class="botao-opcoes" id="editar_eventos" onclick="editar(this)">🖋️ Editar</button>
+            <button class="botao-opcoes" id="apagar_eventos" onclick="apagar(this)">🗑️ Apagar</button>
+            <div class="meio">
+                <div class="divisa"></div>
+            </div>
         </div>
-    </div>
 
+        
+    </div>
 </body>
 </html>

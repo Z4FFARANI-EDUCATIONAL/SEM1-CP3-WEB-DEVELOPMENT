@@ -1,16 +1,25 @@
 body{
     margin: 0;
+    background-color: rgb(248, 248, 248);
 }
 
 header{
-    width: 100%;
     height: 80px;
     color: white;
-    background-color: aqua;
+    background-color: #1DA1F2;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    user-select: none;
+}
+
+.logo {
+    width: 55px;
+    height: 40px;
+    padding-right: 10px;
 }
 
 .banner{
@@ -20,39 +29,225 @@ header{
 .postar{
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
     margin-top: 10px;
 }
 
-.digiPost input{
-    width: 100%;
-    height: 100px;
-    border-radius: 10px;
-    border: solid 2px gray;
+.barras {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.barras-categoria {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+
+.barras-digitar {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.elementos-filtrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 120%;
+    padding-bottom: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 650;
+    user-select: none;
+}
+
+.filtragem {
+    padding-bottom: 10px;
+}
+
+input {
+    border-radius: 10px;
+    border-width: 0px;
+    box-shadow: rgb(48, 48, 48) 0px 0px 2px;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+select {
+    border-radius: 10px;
+    border-width: 0px;
+    box-shadow: rgb(48, 48, 48) 0px 0px 2px;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    user-select: none;
+}
+
+::placeholder {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+.barras-digitar input {
+    padding-bottom: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    transition: 100ms ease;
+}
+
+.botao-postar {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    width: 110px;
+    border-width: 0px;
+    background-color: #1DA1F2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 120%;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 100ms ease;
+    user-select: none;
+}
+
+.botao-opcoes {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 6px;
+    width: 100px;
+    border-width: 0px;
+    background-color: #1DA1F2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 100ms ease;
+    user-select: none;
+}
+
+
+.selecionar {
+    font-weight: 500;
+}
+
+.botao-postar:hover {
+    box-shadow: rgb(0, 102, 255) 0px 0px 3px 0px;
+}
+
+.botao-opcoes:hover {
+    box-shadow: rgb(0, 102, 255) 0px 0px 3px 0px;
+}
+
+.botao-postar:active {
+    background-color: #1586cc;
+}
+
+.botao-opcoes:active {
+    background-color: #1586cc;
 }
 
 .nomePost {
-text-align: center;
-scale: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    scale: 70%;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.nome_categoria {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    user-select: none;
+}
+
+.divisa {
+    background-color: rgba(0, 0, 0, 0.123);
+    padding: 1px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 50px;
+    width: 250px;
+}
+
+.botoesFlutuantes {
+    position: absolute;
+}
+
+.centrao {
+    width: 300px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.meio {
+display: flex;
+justify-content: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    scale: 170%;
+    text-shadow: black 0px 0px 1px;
+    color: white;
+    background-color: transparent;
+    border: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    transition: 200ms ease;
+}
+
+.prev:active {
+    padding-right: 20px;
+}
+
+.next:active {
+    padding-left: 20px;
+}
+
+
+.centralizar {
+display: flex;
+justify-content: center;
 }
 
 .alinhamento {
-text-align: center;
+    text-align: center;
 }
 
 img {
-width: 150px;
-height: 100px;
+    width: 300px;
+    height: 300px;
 }
 
 
 .caixa {
-    margin-left: 850px;
-    margin-right: 850px;
     overflow: hidden;
-    padding: 20px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 10px;
 }
 
 .carrossel {
@@ -73,15 +268,15 @@ height: 100px;
 
 @keyframes next_1 {
     from {margin-left: 0px;}
-    to {margin-left: -50px;}
+    to {margin-left: -300px;}
 }
 @keyframes next_2 {
-    from {margin-left: -50px;}
-    to {margin-left: -100px;}
+    from {margin-left: -300px;}
+    to {margin-left: -600px;}
 }
 @keyframes next_3 {
-    from {margin-left: -100px;}
-    to {margin-left: -150px;}
+    from {margin-left: -600px;}
+    to {margin-left: -900px;}
 }
 
 
@@ -96,15 +291,15 @@ height: 100px;
 }
 
 @keyframes prev_1 {
-    from {margin-left: -150px;}
-    to {margin-left: -100px;}
+    from {margin-left: -900px;}
+    to {margin-left: -600px;}
 }
 @keyframes prev_2 {
-    from {margin-left: -100px;}
-    to {margin-left: -50px;}
+    from {margin-left: -600px;}
+    to {margin-left: -300px;}
 }
 @keyframes prev_3 {
-    from {margin-left: -50px;}
+    from {margin-left: -300px;}
     to {margin-left: 0px;}
 }
 
