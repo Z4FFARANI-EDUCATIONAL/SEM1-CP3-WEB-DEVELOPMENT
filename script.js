@@ -40,7 +40,16 @@ function criarPost() {
         selecionarElementos.img_2.src = escolhadefoto_2;
         selecionarElementos.img_3.src = escolhadefoto_3;
         selecionarElementos.registro.innerText = "Publicado em " + now.getDate() + "/" + month + "/" + now.getFullYear() + ", " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-    } 
+    }
+    if (escolhadefoto_1 === "") {
+        selecionarElementos.img_1.src = "Fotos/default.png";
+    }
+    if (escolhadefoto_2 === "") {
+        selecionarElementos.img_2.src = "Fotos/default.png";
+    }
+    if (escolhadefoto_3 === "") {
+        selecionarElementos.img_3.src = "Fotos/default.png";
+    }
 }
 
 
@@ -107,141 +116,158 @@ function apagar(button) {
     botaoId = button.id;
 
     if (botaoId === "apagar_noticias") {
-        texto = document.getElementById("texto_noticias");
-        img_1 = document.getElementById("img_noticias_1");
-        img_2 = document.getElementById("img_noticias_2");
-        img_3 = document.getElementById("img_noticias_3");
+        texton = document.getElementById("texto_noticias");
+        img_1n = document.getElementById("img_noticias_1");
+        img_2n = document.getElementById("img_noticias_2");
+        img_3n = document.getElementById("img_noticias_3");
         
         const deletar = confirm("Tem certeza que deseja apagar este post?");
         if (deletar) {
-            texto.innerText = "";
-            img_1.src = "Fotos/default.png";
-            img_2.src = "Fotos/default.png";
-            img_3.src = "Fotos/default.png";
+            texton.innerText = "";
+            img_1n.src = "Fotos/default.png";
+            img_2n.src = "Fotos/default.png";
+            img_3n.src = "Fotos/default.png";
         }
     }
 
     else if (botaoId === "apagar_dicas") {
-        texto = document.getElementById("texto_dicas");
-        img_1 = document.getElementById("img_dicas_1");
-        img_2 = document.getElementById("img_dicas_2");
-        img_3 = document.getElementById("img_dicas_3");
+        textod = document.getElementById("texto_dicas");
+        img_1d = document.getElementById("img_dicas_1");
+        img_2d = document.getElementById("img_dicas_2");
+        img_3d = document.getElementById("img_dicas_3");
         
         const deletar = confirm("Tem certeza que deseja apagar este post?");
         if (deletar) {
-            texto.innerText = "";
-            img_1.src = "Fotos/default.png";
-            img_1.src = "Fotos/default.png";
-            img_1.src = "Fotos/default.png";
+            textod.innerText = "";
+            img_1d.src = "Fotos/default.png";
+            img_2d.src = "Fotos/default.png";
+            img_3d.src = "Fotos/default.png";
         }
     }
 
     else if (botaoId === "apagar_eventos") {
-        texto = document.getElementById("texto_eventos");
-        img_1 = document.getElementById("img_eventos_1");
-        img_2 = document.getElementById("img_eventos_2");
-        img_3 = document.getElementById("img_eventos_3");
+        textoe = document.getElementById("texto_eventos");
+        img_1e = document.getElementById("img_eventos_1");
+        img_2e = document.getElementById("img_eventos_2");
+        img_3e = document.getElementById("img_eventos_3");
         
         const deletar = confirm("Tem certeza que deseja apagar este post?");
         if (deletar) {
-            texto.innerText = "";
-            img_1_.src = "Fotos/default.png";
-            img_2.src = "Fotos/default.png";
-            img_3.src = "Fotos/default.png";
+            textoe.innerText = "";
+            img_1e.src = "Fotos/default.png";
+            img_2e.src = "Fotos/default.png";
+            img_3e.src = "Fotos/default.png";
         }
     }
 }
 
 
-let contador_noticias = 1;
-let contador_dicas = 1;
-let contador_eventos = 1;
-
+let contador_noticias = 0;
+let contador_dicas = 0;
+let contador_eventos = 0;
 
 function nextSlide_noticias() {
+    contador_noticias += 1
     const posicao = document.getElementById("carrossel_noticias");
+    console.log(contador_noticias)
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
 
     if (contador_noticias === 1) {
         posicao.classList.add("next_1");
-        contador_noticias = 2;
-
+        
     } else if (contador_noticias === 2) {
         posicao.classList.add("next_2");
-        contador_noticias = 3;
+    }
+    else {
+        contador_noticias = 0;
     }
 }
 function prevSlide_noticias() {
+    contador_noticias -= 1
     const posicao = document.getElementById("carrossel_noticias");
+    console.log(contador_noticias)
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
-
-    if (contador_noticias === 2) {
-        posicao.classList.add("prev_2");
-        contador_noticias = 1;
-
-    } else if (contador_noticias === 3) {
+    
+    if (contador_noticias === 0) {
         posicao.classList.add("prev_3");
-        contador_noticias = 2;
+
+    } else if (contador_noticias === 1) {
+        posicao.classList.add("prev_2");
+    }
+    else {
+        contador_noticias = 0;
     }
 }
 
 function nextSlide_dicas() {
+    contador_dicas += 1
     const posicao = document.getElementById("carrossel_dicas");
+    console.log(contador_dicas)
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
 
     if (contador_dicas === 1) {
         posicao.classList.add("next_1");
-        contador_dicas = 2;
-
+        
     } else if (contador_dicas === 2) {
         posicao.classList.add("next_2");
-        contador_dicas = 3;
+    }
+    else {
+        contador_dicas = 0;
     }
 }
 function prevSlide_dicas() {
+    contador_dicas -= 1
     const posicao = document.getElementById("carrossel_dicas");
+    console.log(contador_dicas)
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
-
-    if (contador_dicas === 2) {
-        posicao.classList.add("prev_2");
-        contador_dicas = 1;
-
-    } else if (contador_dicas === 3) {
+    
+    if (contador_dicas === 0) {
         posicao.classList.add("prev_3");
-        contador_dicas = 2;
+
+    } else if (contador_dicas === 1) {
+        posicao.classList.add("prev_2");
+    }
+    else {
+        contador_dicas = 0;
     }
 }
 
 function nextSlide_eventos() {
+    contador_eventos += 1
     const posicao = document.getElementById("carrossel_eventos");
+    console.log(contador_eventos)
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
 
     if (contador_eventos === 1) {
         posicao.classList.add("next_1");
-        contador_eventos = 2;
-
+        
     } else if (contador_eventos === 2) {
         posicao.classList.add("next_2");
-        contador_eventos = 3;
+    }
+    else {
+        contador_eventos = 0;
     }
 }
 function prevSlide_eventos() {
+    contador_eventos -= 1
     const posicao = document.getElementById("carrossel_eventos");
+    console.log(contador_eventos)
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
-
-    if (contador_eventos === 2) {
-        posicao.classList.add("prev_2");
-        contador_eventos = 1;
-
-    } else if (contador_eventos === 3) {
+    
+    if (contador_eventos === 0) {
         posicao.classList.add("prev_3");
-        contador_eventos = 2;
+
+    } else if (contador_eventos === 1) {
+        posicao.classList.add("prev_2");
+    }
+    else {
+        contador_eventos = 0;
     }
 }
 

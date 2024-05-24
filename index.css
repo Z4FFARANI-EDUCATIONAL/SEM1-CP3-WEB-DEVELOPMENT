@@ -46,7 +46,6 @@ header{
     margin-bottom: 25px;
 }
 
-
 .barras-digitar {
     display: flex;
     flex-direction: column;
@@ -141,7 +140,6 @@ select {
     user-select: none;
 }
 
-
 .selecionar {
     font-weight: 500;
 }
@@ -226,7 +224,6 @@ justify-content: center;
     padding-left: 20px;
 }
 
-
 .centralizar {
 display: flex;
 justify-content: center;
@@ -241,7 +238,6 @@ img {
     height: 300px;
 }
 
-
 .caixa {
     overflow: hidden;
     width: 300px;
@@ -252,25 +248,16 @@ img {
 
 .carrossel {
     display: flex;
-    margin-left: 0px;
 }
 
 
 .next_1 {
-    animation: next_1 1s ease forwards;
+    animation: next_1 550ms ease forwards;
 }
 .next_2 {
-    animation: next_2 1s ease forwards;
-}
-.next_3 {
-    animation: next_3 1s ease forwards;
+    animation: next_2 550ms ease forwards;
 }
 
-
-@keyframes back {
-    from {margin-left: -900px;}
-    to {margin-left: 0px;}
-}
 @keyframes next_1 {
     from {margin-left: 0px;}
     to {margin-left: -300px;}
@@ -279,26 +266,15 @@ img {
     from {margin-left: -300px;}
     to {margin-left: -600px;}
 }
-@keyframes next_3 {
-    from {margin-left: -600px;}
-    to {margin-left: -900px;}
-}
 
 
-.prev_1 {
-    animation: prev_1 1s ease forwards;
-}
 .prev_2 {
-    animation: prev_2 1s ease forwards;
+    animation: prev_2 550ms ease forwards;
 }
 .prev_3 {
-    animation: prev_3 1s ease forwards;
+    animation: prev_3 550ms ease forwards;
 }
 
-@keyframes prev_1 {
-    from {margin-left: -900px;}
-    to {margin-left: -600px;}
-}
 @keyframes prev_2 {
     from {margin-left: -600px;}
     to {margin-left: -300px;}
