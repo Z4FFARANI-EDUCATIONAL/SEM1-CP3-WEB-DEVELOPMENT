@@ -153,24 +153,23 @@ function apagar(button) {
 }
 
 
-let contador = 1;
+let contador_noticias = 1;
+let contador_dicas = 1;
+let contador_eventos = 1;
+
 
 function nextSlide_noticias() {
     const posicao = document.getElementById("carrossel_noticias");
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
 
-    if (contador === 1) {
+    if (contador_noticias === 1) {
         posicao.classList.add("next_1");
-        contador = 2;
+        contador_noticias = 2;
 
-    } else if (contador === 2) {
+    } else if (contador_noticias === 2) {
         posicao.classList.add("next_2");
-        contador = 3;
-
-    } else if (contador === 3) {
-        posicao.classList.add("next_3");
-        contador = 1;
+        contador_noticias = 3;
     }
 }
 function prevSlide_noticias() {
@@ -178,37 +177,28 @@ function prevSlide_noticias() {
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
 
-    if (contador === 1) {
-        posicao.classList.add("prev_1");
-        contador = 3;
-
-    } else if (contador === 2) {
+    if (contador_noticias === 2) {
         posicao.classList.add("prev_2");
-        contador = 1;
+        contador_noticias = 1;
 
-    } else if (contador === 3) {
+    } else if (contador_noticias === 3) {
         posicao.classList.add("prev_3");
-        contador = 2;
+        contador_noticias = 2;
     }
 }
-
 
 function nextSlide_dicas() {
     const posicao = document.getElementById("carrossel_dicas");
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
 
-    if (contador === 1) {
+    if (contador_dicas === 1) {
         posicao.classList.add("next_1");
-        contador = 2;
+        contador_dicas = 2;
 
-    } else if (contador === 2) {
+    } else if (contador_dicas === 2) {
         posicao.classList.add("next_2");
-        contador = 3;
-
-    } else if (contador === 3) {
-        posicao.classList.add("next_3");
-        contador = 1;
+        contador_dicas = 3;
     }
 }
 function prevSlide_dicas() {
@@ -216,37 +206,28 @@ function prevSlide_dicas() {
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
 
-    if (contador === 1) {
-        posicao.classList.add("prev_1");
-        contador = 3;
-
-    } else if (contador === 2) {
+    if (contador_dicas === 2) {
         posicao.classList.add("prev_2");
-        contador = 1;  
+        contador_dicas = 1;
 
-    } else if (contador === 3) {
+    } else if (contador_dicas === 3) {
         posicao.classList.add("prev_3");
-        contador = 2;
+        contador_dicas = 2;
     }
 }
-
 
 function nextSlide_eventos() {
     const posicao = document.getElementById("carrossel_eventos");
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
 
-    if (contador === 1) {
+    if (contador_eventos === 1) {
         posicao.classList.add("next_1");
-        contador = 2;
+        contador_eventos = 2;
 
-    } else if (contador === 2) {
+    } else if (contador_eventos === 2) {
         posicao.classList.add("next_2");
-        contador = 3;
-
-    } else if (contador === 3) {
-        posicao.classList.add("next_3");
-        contador = 1;
+        contador_eventos = 3;
     }
 }
 function prevSlide_eventos() {
@@ -254,17 +235,13 @@ function prevSlide_eventos() {
 
     posicao.classList.remove("next_1", "next_2", "next_3", "prev_1", "prev_2", "prev_3");
 
-    if (contador === 1) {
-        posicao.classList.add("prev_1");
-        contador = 3;
-
-    } else if (contador === 2) {
+    if (contador_eventos === 2) {
         posicao.classList.add("prev_2");
-        contador = 1; 
+        contador_eventos = 1;
 
-    } else if (contador === 3) {
+    } else if (contador_eventos === 3) {
         posicao.classList.add("prev_3");
-        contador = 2;
+        contador_eventos = 2;
     }
 }
 

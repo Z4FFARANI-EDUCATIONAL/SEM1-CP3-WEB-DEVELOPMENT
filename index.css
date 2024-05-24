@@ -266,6 +266,11 @@ img {
     animation: next_3 1s ease forwards;
 }
 
+
+@keyframes back {
+    from {margin-left: -900px;}
+    to {margin-left: 0px;}
+}
 @keyframes next_1 {
     from {margin-left: 0px;}
     to {margin-left: -300px;}
