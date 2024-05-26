@@ -120,6 +120,7 @@ function apagar(button) {
         img_1n = document.getElementById("img_noticias_1");
         img_2n = document.getElementById("img_noticias_2");
         img_3n = document.getElementById("img_noticias_3");
+        data1 = document.getElementById("data_noticias");
         
         const deletar = confirm("Tem certeza que deseja apagar este post?");
         if (deletar) {
@@ -127,6 +128,7 @@ function apagar(button) {
             img_1n.src = "Fotos/default.png";
             img_2n.src = "Fotos/default.png";
             img_3n.src = "Fotos/default.png";
+            data1.innerText = "";
         }
     }
 
@@ -135,6 +137,7 @@ function apagar(button) {
         img_1d = document.getElementById("img_dicas_1");
         img_2d = document.getElementById("img_dicas_2");
         img_3d = document.getElementById("img_dicas_3");
+        data2 = document.getElementById("data_dicas");
         
         const deletar = confirm("Tem certeza que deseja apagar este post?");
         if (deletar) {
@@ -142,6 +145,7 @@ function apagar(button) {
             img_1d.src = "Fotos/default.png";
             img_2d.src = "Fotos/default.png";
             img_3d.src = "Fotos/default.png";
+            data2.innerText = "";
         }
     }
 
@@ -150,6 +154,7 @@ function apagar(button) {
         img_1e = document.getElementById("img_eventos_1");
         img_2e = document.getElementById("img_eventos_2");
         img_3e = document.getElementById("img_eventos_3");
+        data3 = document.getElementById("data_eventos");
         
         const deletar = confirm("Tem certeza que deseja apagar este post?");
         if (deletar) {
@@ -157,6 +162,7 @@ function apagar(button) {
             img_1e.src = "Fotos/default.png";
             img_2e.src = "Fotos/default.png";
             img_3e.src = "Fotos/default.png";
+            data3.innerText = "";
         }
     }
 }
