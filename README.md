@@ -26,8 +26,6 @@ No terminal da IDE, clonar o repositório com `git clone https://github.com/ENDE
 
 No terminal da IDE, navegar até a pasta do projeto com ``cd NOME-DA-PASTA``.
 
-No terminal da IDE, navegar até a pasta do projeto com ``cd SEM1-CP3-WEB-DEVELOPMENT``.
-
 Acessar o site executando o arquivo ``index.html``.
 
 <br>
