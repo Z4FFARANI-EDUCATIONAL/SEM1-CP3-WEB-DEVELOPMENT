@@ -31,12 +31,12 @@ Acessar o site executando o arquivo ``index.html``.
 <br>
 
 # FUNÇÕES
-- **Criação de Posts** | O usuário pode criar um post, adicionando texto, selecionando uma categoria e inserindo até três URLs de imagens.
+- **Criação de posts** | O usuário pode criar um post, adicionando texto, selecionando uma categoria e inserindo até três URLs de imagens.
 - **Carrossel de imagens** | Para cada post criado, as imagens associadas são exibidas em um carrossel interativo.
 - **Data e hora** | Cada post é registrado com a data e hora da publicação.
 - **Filtro por categoria** | É possível filtrar os posts por categoria específica ou visualizar todos simultaneamente.
-- **Edição de Posts** | O usuário pode editar o conteúdo de um post após sua criação.
-- **Exclusão de Posts** | O usuário pode apagar um post quando quiser.
+- **Edição de posts** | O usuário pode editar o conteúdo de um post após sua criação.
+- **Exclusão de posts** | O usuário pode apagar um post quando quiser.
 
 <br>
 
