@@ -28,7 +28,7 @@ git clone https://github.com/Z4FFARANI-EDUCATIONAL/SEM1-CP3-WEB-DEVELOPMENT.git
 cd SEM1-CP3-WEB-DEVELOPMENT/site
 ```
 
-3. Acessar o site executando o arquivo: ``index.html``
+3. Acessar o site executando o arquivo: `index.html`.
    
 <br>
 
@@ -43,8 +43,8 @@ cd SEM1-CP3-WEB-DEVELOPMENT/site
 <br>
 
 # OBSERVAÇÕES
-- Se uma imagem não for fornecida, um ``placeholder`` padrão será exibido.
-- O projeto segue uma estrutura simples utilizando HTML, CSS e JavaScript. Todos os arquivos estão localizados no mesmo diretório, sendo ``index.html``, ``index.css``, e ``script.js`` os principais arquivos do projeto.
+- Se uma imagem não for fornecida, um `placeholder` padrão será exibido.
+- O projeto segue uma estrutura simples utilizando HTML, CSS e JavaScript. Todos os arquivos estão localizados no mesmo diretório, sendo `index.html`, `index.css`, e `script.js` os principais arquivos do projeto.
 - O layout do site utiliza unidades relativas para margem e tamanho de fonte.
 - O projeto pode ser facilmente expandido para incluir funcionalidades mais avançadas, como interações entre usuários, curtidas em posts e comentários
 
