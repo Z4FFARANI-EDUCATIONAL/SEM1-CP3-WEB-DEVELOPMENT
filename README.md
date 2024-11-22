@@ -28,7 +28,7 @@ git clone https://github.com/Z4FFARANI-EDUCATIONAL/SEM1-CP3-WEB-DEVELOPMENT.git
 cd SEM1-CP3-WEB-DEVELOPMENT/site
 ```
 
-3. Acessar o site executando o arquivo: `index.html`.
+3. Acessar o site executando o arquivo: `index.html`
    
 <br>
 
