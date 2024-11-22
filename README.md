@@ -1,9 +1,9 @@
 ![banner](./assets/banner.png)
 
 # INTEGRANTES
-- **Kaique Zaffarani**
-- **Guilherme Santos Nunes**
-- **Henry Evideira Paulo**
+- **[Kaique Zaffarani](https://github.com/Z4ffarani)**
+- **[Guilherme Santos Nunes](https://github.com/sannunez)**
+- **[Henry Evideira Paulo](https://github.com/Hep4xl0)**
 
 <br>
 
@@ -33,7 +33,7 @@ cd SEM1-CP3-WEB-DEVELOPMENT/site
 <br>
 
 # FUNÇÕES
-- **Criação de posts** | O usuário pode criar um post, adicionando texto, selecionando uma categoria e inserindo até três URLs de imagens.
+- **Criação de posts** | O usuário pode criar um post, adicionando texto, selecionando uma categoria e inserindo até três URLs (localizador uniforme de recursos) de imagens.
 - **Carrossel de imagens** | Para cada post criado, as imagens associadas são exibidas em um carrossel interativo.
 - **Data e hora** | Cada post é registrado com a data e hora da publicação.
 - **Filtro por categoria** | É possível filtrar os posts por categoria específica ou visualizar todos simultaneamente.
