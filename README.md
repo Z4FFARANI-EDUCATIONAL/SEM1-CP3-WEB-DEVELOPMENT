@@ -1,9 +1,9 @@
 ![banner](./assets/banner.png)
 
 # INTEGRANTES
-- **[Kaique Zaffarani](https://github.com/Z4ffarani)**
 - **[Guilherme Santos Nunes](https://github.com/sannunez)**
 - **[Henry Evideira Paulo](https://github.com/Hep4xl0)**
+- **[Kaique Zaffarani](https://github.com/Z4ffarani)**
 
 <br>
 
